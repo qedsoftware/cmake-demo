@@ -11,8 +11,9 @@ foreach (lib ${LIBS})
 endforeach (lib)
 
 # identify external libraries
+set (EXTLIBS ${Boost_SYSTEM_LIBRARY} ${Boost_DATE_TIME_LIBRARY} ${Boost_THREAD_LIBRARY} m)
 if(UNIX)
-	set (EXTLIBS m)
+	LIST(APPEND EXTLIBS m)
 endif(UNIX)
 
 # build executable

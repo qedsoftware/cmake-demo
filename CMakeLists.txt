@@ -10,6 +10,9 @@ project( CMAKEDEMO )
 set (CMAKEDEMO_VERSION_MAJOR 1)
 set (CMAKEDEMO_VERSION_MINOR 0)
 
+# packages to find
+find_package( Boost COMPONENTS system date_time thread REQUIRED ) 
+
 # compile options
 if (UNIX)
   message(status " Setting GCC flags")
